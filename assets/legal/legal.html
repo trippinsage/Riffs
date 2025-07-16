@@ -30,12 +30,11 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
-
   <!-- Legal Content -->
   <section id="main-content" class="py-16 bg-white fade-in">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-red-600 text-center mb-6">Legal & Privacy</h2>
-      <div class="max-w-3xl mx-auto prose">
+      <div class="max-w-4xl mx-auto prose">
         <h3 class="text-2xl font-semibold text-gray-800 mt-8">Privacy Policy</h3>
         <p class="text-lg"><strong>Effective Date: July 6, 2025</strong></p>
         <p class="text-lg">At Riff's Department Store, we are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, disclose, and safeguard your personal information when you visit our website, engage with our services, or participate in our programs.</p>
@@ -112,15 +111,5 @@
       <p class="mt-2"><a href="/assets/legal/legal.html" target="_blank" rel="noopener noreferrer" class="text-red-300 hover:text-red-400 transition-colors">Legal & Privacy</a></p>
     </div>
   </footer>
-
-  <!-- JavaScript -->
-  <script src="/assets/js/script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').catch(err => console.error('Service Worker registration failed:', err));
-      });
-    }
-  </script>
 </body>
 </html>

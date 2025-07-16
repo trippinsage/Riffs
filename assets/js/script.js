@@ -26,12 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // DOM references
   const storeSelect = document.getElementById('store-select');
   const storeInfo = document.getElementById('store-info');
-  const menuToggle = document.getElementById('menu-toggle');
-  const navMenu = document.getElementById('nav-menu');
   const mapLoading = document.getElementById('map-loading');
 
   // Error handling for missing DOM elements
-  if (!storeSelect || !storeInfo || !menuToggle || !navMenu || !mapLoading) {
+  if (!storeSelect || !storeInfo || !mapLoading) {
     console.error('One or more DOM elements are missing. Please check the HTML structure.');
     return;
   }
@@ -127,16 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       map.setView([selectedStore.lat, selectedStore.lng], 12, { animate: true });
     }
-  });
-
-  // Hamburger menu toggle
-  menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-    navMenu.classList.toggle('hidden');
-    navMenu.classList.toggle('flex');
-    navMenu.classList.toggle('flex-col');
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    menuToggle.querySelector('svg').classList.toggle('rotate-90');
   });
 
   // Fix map rendering
