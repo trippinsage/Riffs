@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Store data
   const stores = [
-    { id: "badgers-quay", name: "Badger's Quay", address: "3 Main St, Badger's Quay, NL A0G 1B0", phone: "(709) 536-3005", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.6647, lng: -53.5838 },
-    { id: "baie-verte", name: "Baie Verte", address: "5 Farm Rd, Baie Verte, NL A0K 1B0", phone: "(709) 532-8080", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.9367, lng: -56.1927 },
-    { id: "bonavista", name: "Bonavista", address: "5 Williams Dr, Bonavista, NL A0C 1B0", phone: "(709) 468-2403", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.6562, lng: -53.1119 },
-    { id: "clarenville", name: "Clarenville", address: "69 Manitoba Dr, Clarenville, NL A5A 1K5", phone: "(709) 466-7393", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.1531, lng: -53.9632 },
-    { id: "deer-lake", name: "Deer Lake", address: "9 Wight's Rd, Deer Lake, NL A8A 2J4", phone: "(709) 635-4200", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.174, lng: -57.4266 },
-    { id: "fogo-island", name: "Fogo Island", address: "39 Main St, Fogo, NL A0G 2B0", phone: "(709) 266-2271", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.7161, lng: -54.2837 },
-    { id: "forteau", name: "Forteau", address: "12 Forteau Rd, Forteau, NL A0K 2P0", phone: "(709) 931-2244", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 51.4728, lng: -56.814 },
-    { id: "gander", name: "Gander", address: "104 Trans-Canada Hwy, Gander, NL A1V 1P6", phone: "(709) 651-2324", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9517, lng: -54.6087 },
-    { id: "grand-falls-windsor", name: "Grand Falls-Windsor", address: "20 Cromer Ave, Grand Falls-Windsor, NL A2A 1X1", phone: "(709) 489-5631", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9565, lng: -55.6628 },
-    { id: "happy-valley-goose-bay", name: "Happy Valley-Goose Bay", address: "70 Hamilton River Rd, Happy Valley-Goose Bay, NL A0P 1E0", phone: "(709) 896-5350", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 53.3017, lng: -60.326 },
-    { id: "harbour-breton", name: "Harbour Breton", address: "3 Canada Dr, Harbour Breton, NL A0H 1P0", phone: "(709) 885-2022", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.4743, lng: -55.8041 },
-    { id: "lewisporte", name: "Lewisporte", address: "465 Main St, Lewisporte, NL A0G 3A0", phone: "(709) 535-6608", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.2452, lng: -55.0485 },
-    { id: "marystown", name: "Marystown", address: "74 Union St, Marystown, NL A0E 2M0", phone: "(709) 279-1651", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.1643, lng: -55.148 },
+    { id: "badgers-quay", name: "Badger's Quay", address: "10 Hermit Cove Rd, Badger's Quay, NL A0G 1B0", phone: "(709) 536-3005", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.6642, lng: -53.5845 },
+    { id: "baie-verte", name: "Baie Verte", address: "28 Main St., Baie Verte, NL A0K 1B0", phone: "(709) 532-8080", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.9367, lng: -56.1927 },
+    { id: "bonavista", name: "Bonavista", address: "50-60 Church St., Bonavista, NL A0C 1B0", phone: "(709) 468-2403", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.6562, lng: -53.1119 },
+    { id: "clarenville", name: "Clarenville", address: "4 Thompson St., Clarenville, NL A5A 1Y9", phone: "(709) 466-7393", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.1531, lng: -53.9632 },
+    { id: "deer-lake", name: "Deer Lake", address: "10 Commerce St., Deer Lake, NL A8A 1E6", phone: "(709) 635-4200", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.1740, lng: -57.4266 },
+    { id: "fogo-island", name: "Fogo Island", address: "39 Main St, Fogo, NL A0G 2B0", phone: "(709) 266-2271", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.7150, lng: -54.2820 },
+    { id: "forteau", name: "Forteau", address: "Main Highway, Forteau, NL A0K 2P0", phone: "(709) 931-2244", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 51.4728, lng: -56.8140 },
+    { id: "gander", name: "Gander", address: "140 Bennet Drive, Gander, NL A1V 2E4", phone: "(709) 651-2324", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9517, lng: -54.6087 },
+    { id: "grand-falls-windsor", name: "Grand Falls-Windsor", address: "2 Hardy Avenue, Grand Falls-Windsor, NL A2A 2P9", phone: "(709) 489-5631", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9565, lng: -55.6628 },
+    { id: "happy-valley-goose-bay", name: "Happy Valley-Goose Bay", address: "70 Hamilton River Rd, Happy Valley-Goose Bay, NL A0P 1E0", phone: "(709) 896-5350", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 53.3017, lng: -60.3260 },
+    { id: "harbour-breton", name: "Harbour Breton", address: "16-18 Canada Dr, Harbour Breton, NL A0H 1P0", phone: "(709) 885-2022", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.4743, lng: -55.8041 },
+    { id: "lewisporte", name: "Lewisporte", address: "Lewisporte Mall, Lewisporte, NL A0G 3A0", phone: "(709) 535-6608", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.2452, lng: -55.0485 },
+    { id: "marystown", name: "Marystown", address: "640 Queen St., Marystown, NL A0E 2M0", phone: "(709) 279-1651", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.1643, lng: -55.1480 },
     { id: "port-aux-choix", name: "Port aux Choix", address: "45 Fisher St, Port au Choix, NL A0K 4C0", phone: "(709) 861-2100", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 50.6987, lng: -57.3537 },
-    { id: "port-aux-basques", name: "Port aux Basques", address: "3 Marine Dr, Channel-Port aux Basques, NL A0M 1C0", phone: "(709) 695-7322", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.5716, lng: -59.1367 },
-    { id: "roddickton", name: "Roddickton", address: "10 Main St, Roddickton, NL A0K 4P0", phone: "(709) 457-1234", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 50.85, lng: -56.1167 },
-    { id: "springdale", name: "Springdale", address: "4 Chaulk Rd, Springdale, NL A0J 1T0", phone: "(709) 673-3787", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.4997, lng: -56.0645 },
-    { id: "st-albans", name: "St. Alban's", address: "42 Barnard Dr, St. Alban's, NL A0H 2E0", phone: "(709) 538-3370", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.8733, lng: -55.8417 },
-    { id: "st-anthony", name: "St. Anthony", address: "5 Indian Carrs St, St. Anthony, NL A0K 4S0", phone: "(709) 454-2073", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 51.3644, lng: -55.5811 },
-    { id: "twillingate", name: "Twillingate", address: "10 Gillam St, Twillingate, NL A0G 4M0", phone: "(709) 884-2473", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.6451, lng: -54.7597 }
+    { id: "port-aux-basques", name: "Port aux Basques", address: "Grand Bay Road, Channel-Port aux Basques, NL A0M 1C0", phone: "(709) 695-7322", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.5716, lng: -59.1367 },
+    { id: "roddickton", name: "Roddickton", address: "51 Major St., Roddickton, NL A0K 4P0", phone: "(709) 457-1234", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 50.8505, lng: -56.1175 },
+    { id: "springdale", name: "Springdale", address: "197 Little Bay Rd., Springdale, NL A0J 1T0", phone: "(709) 673-3787", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.4997, lng: -56.0645 },
+    { id: "st-albans", name: "St. Alban's", address: "102 Main St., St. Alban's, NL A0H 2E0", phone: "(709) 538-3370", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.8733, lng: -55.8417 },
+    { id: "st-anthony", name: "St. Anthony", address: "143-149 West St., St. Anthony, NL A0K 4S0", phone: "(709) 454-2073", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 51.3644, lng: -55.5811 },
+    { id: "twillingate", name: "Twillingate", address: "3 Main St, Twillingate, NL A0G 4M0", phone: "(709) 884-2473", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.6448, lng: -54.7605 }
   ];
 
   // DOM references
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const mapLoading = document.getElementById('map-loading');
 
   if (!storeSelect || !storeInfo || !mapLoading) {
-    console.error('One or more DOM elements are missing. Please check the HTML structure.');
+    console.error('One or more required DOM elements are missing.');
     return;
   }
 
-  // Initialize Leaflet map
+  // Initialize map
   let map;
   try {
     map = L.map('store-map', {
@@ -41,25 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
       zoomAnimation: true,
       fadeAnimation: true
     }).setView([49.5, -56.0], 6);
-  } catch (error) {
-    console.error('Map initialization failed:', error);
+  } catch (err) {
+    console.error('Map initialization failed:', err);
     mapLoading.classList.add('hidden');
     return;
   }
 
   // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
     maxZoom: 18,
     minZoom: 5
   }).addTo(map);
 
-  // Custom icons (using SVG strings, embedded safely in divIcon)
+  // Custom icons
   const redIconSvg = `
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" 
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13
-        c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 
+        c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5
         12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="#EB1B21"/>
     </svg>`;
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
       xmlns="http://www.w3.org/2000/svg">
       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13
-        c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 
+        c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5
         12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="#C3161C"/>
     </svg>`;
 
@@ -85,20 +85,41 @@ document.addEventListener('DOMContentLoaded', () => {
     iconAnchor: [12, 24]
   });
 
-  // Add markers for all stores
+  // Add markers and map store ids to markers
   const markerMap = new Map();
+
   stores.forEach(store => {
-    const marker = L.marker([store.lat, store.lng], { icon: redIcon }).addTo(map);
+    const marker = L.marker([store.lat, store.lng], { icon: redIcon, keyboard: true })
+      .addTo(map)
+      .bindTooltip(store.name, { permanent: false, direction: 'top' });
+
     markerMap.set(store.id, marker);
+
+    // On marker click or keyboard enter, select store in dropdown
+    marker.on('click', () => {
+      storeSelect.value = store.id;
+      storeSelect.dispatchEvent(new Event('change'));
+    });
+
+    marker.on('keypress', (e) => {
+      if (e.originalEvent.key === 'Enter' || e.originalEvent.key === ' ') {
+        e.originalEvent.preventDefault();
+        marker.fire('click');
+      }
+    });
   });
 
-  // Map legend
+  // Add legend control
   const legend = L.control({ position: 'bottomright' });
   legend.onAdd = function () {
     const div = L.DomUtil.create('div', 'leaflet-control legend bg-white p-2 rounded shadow-md');
     div.innerHTML = `
-      <div class="flex items-center mb-1"><span class="inline-block w-4 h-4 mr-2" style="background:#EB1B21"></span>Riff's Store</div>
-      <div class="flex items-center"><span class="inline-block w-4 h-4 mr-2" style="background:#C3161C"></span>Selected Store</div>
+      <div class="flex items-center mb-1">
+        <span class="inline-block w-4 h-4 mr-2" style="background:#EB1B21"></span>Riff's Store
+      </div>
+      <div class="flex items-center">
+        <span class="inline-block w-4 h-4 mr-2" style="background:#C3161C"></span>Selected Store
+      </div>
     `;
     return div;
   };
@@ -112,37 +133,48 @@ document.addEventListener('DOMContentLoaded', () => {
     storeSelect.appendChild(option);
   });
 
-  // Store selection handler
+  // Update store info panel and map on selection
   storeSelect.addEventListener('change', () => {
-    const selectedStoreId = storeSelect.value;
-    if (!selectedStoreId) {
+    const selectedId = storeSelect.value;
+
+    if (!selectedId) {
       storeInfo.innerHTML = '';
       storeInfo.classList.add('hidden');
+
       markerMap.forEach(marker => marker.setIcon(redIcon));
+
+      // Reset map view to default
       map.setView([49.5, -56.0], 6, { animate: true });
       return;
     }
 
-    const selectedStore = stores.find(store => store.id === selectedStoreId);
-    if (selectedStore) {
-      storeInfo.innerHTML = `
-        <h3 class="text-xl font-bold text-red-600">${selectedStore.name}</h3>
-        <p><strong>Address:</strong> ${selectedStore.address}</p>
-        <p><strong>Phone:</strong> <a href="tel:${selectedStore.phone}" class="text-red-600 hover:text-red-700">${selectedStore.phone}</a></p>
-        <p><strong>Hours:</strong> ${selectedStore.hours}</p>
-        <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedStore.address)}" target="_blank" rel="noopener" class="google-maps-link">Open in Google Maps</a>
-      `;
-      storeInfo.classList.remove('hidden');
+    const selectedStore = stores.find(store => store.id === selectedId);
+    if (!selectedStore) return;
 
-      markerMap.forEach((marker, id) => {
-        marker.setIcon(id === selectedStoreId ? selectedIcon : redIcon);
-      });
+    // Format phone for tel link (remove non-numeric except plus)
+    const telPhone = selectedStore.phone.replace(/[^\d+]/g, '');
 
-      map.setView([selectedStore.lat, selectedStore.lng], 12, { animate: true });
-    }
+    storeInfo.innerHTML = `
+      <h3 class="text-xl font-bold text-red-600">${selectedStore.name}</h3>
+      <p><strong>Address:</strong> ${selectedStore.address}</p>
+      <p><strong>Phone:</strong> <a href="tel:${telPhone}" class="text-red-600 hover:text-red-700">${selectedStore.phone}</a></p>
+      <p><strong>Hours:</strong> ${selectedStore.hours}</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(selectedStore.address)}" target="_blank" rel="noopener noreferrer" class="google-maps-link">
+        Open in Google Maps
+      </a>
+    `;
+    storeInfo.classList.remove('hidden');
+
+    // Update marker icons
+    markerMap.forEach((marker, id) => {
+      marker.setIcon(id === selectedId ? selectedIcon : redIcon);
+    });
+
+    // Center and zoom map on selected store
+    map.setView([selectedStore.lat, selectedStore.lng], 12, { animate: true });
   });
 
-  // Fix map rendering after load
+  // Fix map size and hide loading once ready
   map.whenReady(() => {
     setTimeout(() => {
       map.invalidateSize();
