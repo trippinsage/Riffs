@@ -1,27 +1,187 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Store data
-  const stores = [
-    { id: "badgers-quay", name: "Badger's Quay", address: "10 Hermit Cove Rd, Badger's Quay, NL A0G 1B0", phone: "(709) 536-3005", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 48.6642, lng: -53.5845 },
-    { id: "baie-verte", name: "Baie Verte", address: "28 Main St., Baie Verte, NL A0K 1B0", phone: "(709) 532-8080", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 49.9367, lng: -56.1927 },
-    { id: "bonavista", name: "Bonavista", address: "50-60 Church St., Bonavista, NL A0C 1B0", phone: "(709) 468-2403", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.6562, lng: -53.1119 },
-    { id: "clarenville", name: "Clarenville", address: "4 Thompson St., Clarenville, NL A5A 1Y9", phone: "(709) 466-7393", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.1531, lng: -53.9632 },
-    { id: "deer-lake", name: "Deer Lake", address: "10 Commerce St., Deer Lake, NL A8A 1E6", phone: "(709) 635-4200", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.1740, lng: -57.4266 },
-    { id: "fogo-island", name: "Fogo Island", address: "39 Main St, Fogo, NL A0G 2B0", phone: "(709) 266-2271", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 49.7150, lng: -54.2820 },
-    { id: "forteau", name: "Forteau", address: "Main Highway, Forteau, NL A0K 2P0", phone: "(709) 931-2244", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 51.4728, lng: -56.8140 },
-    { id: "gander", name: "Gander", address: "140 Bennet Drive, Gander, NL A1V 2E4", phone: "(709) 651-2324", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9517, lng: -54.6087 },
-    { id: "grand-falls-windsor", name: "Grand Falls-Windsor", address: "2 Hardy Avenue, Grand Falls-Windsor, NL A2A 2P9", phone: "(709) 489-5631", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 48.9565, lng: -55.6628 },
-    { id: "happy-valley-goose-bay", name: "Happy Valley-Goose Bay", address: "70 Hamilton River Rd, Happy Valley-Goose Bay, NL A0P 1E0", phone: "(709) 896-5350", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 53.3017, lng: -60.3260 },
-    { id: "harbour-breton", name: "Harbour Breton", address: "16-18 Canada Dr, Harbour Breton, NL A0H 1P0", phone: "(709) 885-2022", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 47.4743, lng: -55.8041 },
-    { id: "lewisporte", name: "Lewisporte", address: "Lewisporte Mall, Lewisporte, NL A0G 3A0", phone: "(709) 535-6608", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.2452, lng: -55.0485 },
-    { id: "marystown", name: "Marystown", address: "640 Queen St., Marystown, NL A0E 2M0", phone: "(709) 279-1651", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.1643, lng: -55.1480 },
-    { id: "port-aux-choix", name: "Port aux Choix", address: "45 Fisher St, Port au Choix, NL A0K 4C0", phone: "(709) 861-2100", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 50.6987, lng: -57.3537 },
-    { id: "port-aux-basques", name: "Port aux Basques", address: "Grand Bay Road, Channel-Port aux Basques, NL A0M 1C0", phone: "(709) 695-7322", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 47.5716, lng: -59.1367 },
-    { id: "roddickton", name: "Roddickton", address: "51 Major St., Roddickton, NL A0K 4P0", phone: "(709) 457-1234", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 50.8505, lng: -56.1175 },
-    { id: "springdale", name: "Springdale", address: "197 Little Bay Rd., Springdale, NL A0J 1T0", phone: "(709) 673-3787", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 49.4997, lng: -56.0645 },
-    { id: "st-albans", name: "St. Alban's", address: "102 Main St., St. Alban's, NL A0H 2E0", phone: "(709) 538-3370", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 47.8733, lng: -55.8417 },
-    { id: "st-anthony", name: "St. Anthony", address: "143-149 West St., St. Anthony, NL A0K 4S0", phone: "(709) 454-2073", hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed", lat: 51.3644, lng: -55.5811 },
-    { id: "twillingate", name: "Twillingate", address: "3 Main St, Twillingate, NL A0G 4M0", phone: "(709) 884-2473", hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed", lat: 49.6448, lng: -54.7605 }
-  ];
+const stores = [
+  {
+    id: "badgers-quay",
+    name: "Badger's Quay",
+    address: "10 Hermit Cove Rd, Badger's Quay, NL A0G 1B0",
+    phone: "(709) 536-3005",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 49.121328,
+    lng: -53.591866
+  },
+  {
+    id: "baie-verte",
+    name: "Baie Verte",
+    address: "28 Main St., Baie Verte, NL A0K 1B0",
+    phone: "(709) 532-8080",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 49.9087083,
+    lng: -56.1946584
+  },
+  {
+    id: "bonavista",
+    name: "Bonavista",
+    address: "50-60 Church St., Bonavista, NL A0C 1B0",
+    phone: "(709) 468-2403",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 48.65972,
+    lng: -53.12083
+  },
+  {
+    id: "clarenville",
+    name: "Clarenville",
+    address: "4 Thompson St., Clarenville, NL A5A 1Y9",
+    phone: "(709) 466-7393",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 48.1565889,
+    lng: -53.9650500
+  },
+  {
+    id: "deer-lake",
+    name: "Deer Lake",
+    address: "10 Commerce St., Deer Lake, NL A8A 1E6",
+    phone: "(709) 635-4200",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 49.16671,
+    lng: -57.43163
+  },
+  {
+    id: "fogo-island",
+    name: "Fogo Island",
+    address: "39 Main St, Fogo, NL A0G 2B0",
+    phone: "(709) 266-2271",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 49.65833,
+    lng: -54.18250
+  },
+  {
+    id: "forteau",
+    name: "Forteau",
+    address: "Main Highway, Forteau, NL A0K 2P0",
+    phone: "(709) 931-2244",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 51.47846,
+    lng: -56.957563
+  },
+  {
+    id: "gander",
+    name: "Gander",
+    address: "140 Bennet Drive, Gander, NL A1V 2E4",
+    phone: "(709) 651-2324",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 48.9517,
+    lng: -54.6087
+  },
+  {
+    id: "grand-falls-windsor",
+    name: "Grand Falls-Windsor",
+    address: "2 Hardy Avenue, Grand Falls-Windsor, NL A2A 2P9",
+    phone: "(709) 489-5631",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 48.9565,
+    lng: -55.6628
+  },
+  {
+    id: "happy-valley-goose-bay",
+    name: "Happy Valley-Goose Bay",
+    address: "70 Hamilton River Rd, Happy Valley-Goose Bay, NL A0P 1E0",
+    phone: "(709) 896-5350",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 53.3016826,
+    lng: -60.3260842
+  },
+  {
+    id: "harbour-breton",
+    name: "Harbour Breton",
+    address: "16-18 Canada Dr, Harbour Breton, NL A0H 1P0",
+    phone: "(709) 885-2022",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 47.477522,
+    lng: -55.824044
+  },
+  {
+    id: "lewisporte",
+    name: "Lewisporte",
+    address: "Lewisporte Mall, Lewisporte, NL A0G 3A0",
+    phone: "(709) 535-6608",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 49.2450384,
+    lng: -55.0591548
+  },
+  {
+    id: "marystown",
+    name: "Marystown",
+    address: "640 Queen St., Marystown, NL A0E 2M0",
+    phone: "(709) 279-1651",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 47.1650754,
+    lng: -55.1555299
+  },
+  {
+    id: "port-aux-choix",
+    name: "Port aux Choix",
+    address: "45 Fisher St, Port au Choix, NL A0K 4C0",
+    phone: "(709) 861-2100",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 50.7050139,
+    lng: -57.3270028
+  },
+  {
+    id: "port-aux-basques",
+    name: "Port aux Basques",
+    address: "Grand Bay Road, Channel-Port aux Basques, NL A0M 1C0",
+    phone: "(709) 695-7322",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 47.5716,
+    lng: -59.1367
+  },
+  {
+    id: "roddickton",
+    name: "Roddickton",
+    address: "51 Major St., Roddickton, NL A0K 4P0",
+    phone: "(709) 457-1234",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 50.8505,
+    lng: -56.1175
+  },
+  {
+    id: "springdale",
+    name: "Springdale",
+    address: "197 Little Bay Rd., Springdale, NL A0J 1T0",
+    phone: "(709) 673-3787",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 49.4997,
+    lng: -56.0645
+  },
+  {
+    id: "st-albans",
+    name: "St. Alban's",
+    address: "102 Main St., St. Alban's, NL A0H 2E0",
+    phone: "(709) 538-3370",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 47.87785,
+    lng: -55.84477
+  },
+  {
+    id: "st-anthony",
+    name: "St. Anthony",
+    address: "143-149 West St., St. Anthony, NL A0K 4S0",
+    phone: "(709) 454-2073",
+    hours: "Mon–Sat: 10 a.m.–5 p.m.; Sun: Closed",
+    lat: 51.3644,
+    lng: -55.5811
+  },
+  {
+    id: "twillingate",
+    name: "Twillingate",
+    address: "3 Main St, Twillingate, NL A0G 4M0",
+    phone: "(709) 884-2473",
+    hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
+    lat: 49.6443111,
+    lng: -54.7436166
+  }
+];
 
   // DOM references
   const storeSelect = document.getElementById('store-select');
