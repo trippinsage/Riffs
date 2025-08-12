@@ -7,8 +7,8 @@ const stores = [
     address: "10 Hermit Cove Rd, Badger's Quay, NL A0G 1B0",
     phone: "(709) 536-3005",
     hours: "Tues–Sat: 10 a.m.–5 p.m.; Sun & Mon: Closed",
-    lat: 48.16580016301305,
-    lng: -53.9817263121612
+    lat: 49.1214,
+    lng: -53.598593
   },
   {
     id: "baie-verte",
