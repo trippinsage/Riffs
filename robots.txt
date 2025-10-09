@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/legal/
+
+Sitemap: https://www.riffs.ca/sitemap.xml
