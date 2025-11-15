@@ -81,18 +81,78 @@
 </head>
 <body class="text-gray-800 font-sans">
 
-  <!-- Hero Section -->
-  <section id="main-content" class="relative overflow-hidden pt-0">
-    <div class="absolute inset-0 bg-black bg-opacity-40 z-[10]"></div>
-    <img src="/assets/img/riffs-background.webp" alt="Inside Riff's Department Store" class="w-full h-full object-cover object-center z-[5]" loading="eager" width="1920" height="1080" onerror="this.src='/assets/img/riffs-background.jpg'" />
-    <div class="absolute inset-0 flex items-center justify-center text-center text-white z-[15]">
-      <div class="container mx-auto px-4">
-        <h1 class="text-2xl md:text-4xl font-bold mb-4 text-shadow">Quality and Value Since 1939</h1>
-        <p class="text-base md:text-lg mb-6 text-shadow">Explore Newfoundland’s go-to destination for affordable clothing and essentials – proudly local for over 85 years.</p>
-        <a href="#locations" class="button button-primary">Shop Now</a>
+    <!-- BLACK FRIDAY FLYER – FULLY BLACKED OUT -->
+<section id="current-flyer" class="py-20 bg-black text-white relative overflow-hidden">
+  <!-- Subtle red glow background -->
+  <div class="absolute inset-0 opacity-30">
+    <div class="absolute inset-0 bg-gradient-to-br from-red-700 via-black to-black"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <!-- Epic Black Friday Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+        <span class="text-white drop-shadow-2xl">BLACK</span>
+        <span class="text-red-600 drop-shadow-2xl"> FRIDAY</span>
+      </h2>
+      <p class="text-2xl md:text-4xl font-bold text-red-500 mt-4 animate-pulse">
+        STOREWIDE BLOWOUT
+      </p>
+    </div>
+
+    <p class="text-xl md:text-2xl text-center text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+      Clothing • Footwear • Home Goods • Electronics & More<br>
+      <span class="text-red-400 font-bold text-2xl">IN-STORE ONLY – ALL 20 RIFF’S LOCATIONS!</span>
+    </p>
+
+    <!-- Flyer Card – Dark & Dramatic -->
+    <div class="max-w-5xl mx-auto">
+      <div class="bg-gradient-to-b from-gray-900 to-black border-4 border-red-600 rounded-2xl shadow-2xl overflow-hidden
+                  transform transition-all duration-500 hover:scale-[1.02] hover:shadow-red-600/40">
+        
+        <!-- Flyer Image -->
+        <div class="relative overflow-hidden bg-black">
+          <img 
+            src="/assets/img/riffs-flyer.jpg" 
+            alt="Riff's Black Friday Flyer – Biggest Sale of the Year!"
+            class="w-full h-auto object-contain transition-transform duration-700 hover:scale-105"
+            loading="lazy"
+          >
+
+        <!-- CTA Footer -->
+        <div class="p-8 md:p-10 bg-black bg-opacity-90 text-center">
+          <!-- Much more reasonable size, still screams urgency -->
+          <p class="text-2xl md:text-3xl font-bold text-red-500 mb-8 tracking-wide uppercase">
+            Limited Time • While Quantities Last
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <!-- Download Button -->
+            <a href="/assets/img/riffs-flyer.jpg" 
+               download="Riffs-Black-Friday-Flyer-2025"
+               class="button-primary bg-red-600 hover:bg-red-700 text-white px-12 py-5 text-xl font-bold rounded-lg
+                      shadow-xl hover:shadow-red-600/60 transform hover:scale-110 transition-all duration-300 flex items-center gap-3">
+              Download Flyer Now
+            </a>
+
+            <!-- Full Screen View -->
+            <a href="/assets/img/riffs-flyer.jpg" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="px-12 py-5 bg-white text-black font-bold text-xl rounded-lg
+                      hover:bg-gray-100 transform hover:scale-110 transition-all duration-300 shadow-xl">
+              View Full Screen
+            </a>
+          </div>
+
+          <p class="text-gray-400 text-sm mt-8">
+            Sale ends soon • Prices valid Black Friday only
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Red Divider -->
   <div class="bg-red-600 h-1 sm:h-1.5 lg:h-2 animate-fade-in"></div>

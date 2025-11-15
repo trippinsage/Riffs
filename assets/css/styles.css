@@ -329,6 +329,21 @@ section#main-content .container {
   outline: none;
 }
 
+/* Extra polish for flyer section */
+#current-flyer img {
+  max-height: 90vh;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 640px) {
+  #current-flyer .button-primary,
+  #current-flyer a[href^="/assets/img/riffs-flyer.jpeg"][target="_blank"] {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 640px) {
   #store-map { height: 22rem; }
   #store-info { padding: 2rem; }
