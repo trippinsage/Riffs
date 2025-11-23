@@ -5,12 +5,12 @@ const urlsToCache = [
   '/assets/css/styles.css',
   '/assets/js/script.js',
   '/assets/img/riffs-cutout.webp',
-  '/assets/img/riffs-classic.jpg',
-  '/assets/img/riffs-classic-640.jpg',
-  '/assets/img/riffs-background.webp',
-  '/assets/img/riffs-challange.png',
+  '/assets/img/heritage.webp',
+  '/assets/img/heritage.jpg',
+  '/assets/img/background.webp',
+  '/assets/img/challange.webp',
   '/404.html',
-  '/assets/legal/legal.html',
+  '/legal.html',
   '/sitemap.xml'
 ];
 
