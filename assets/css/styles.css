@@ -1,0 +1,355 @@
+/* ==========================================================================
+   RIFF'S DEPARTMENT STORE – FINAL MASTER STYLESHEET
+   Mobile-first | Fully responsive | Clean & Professional
+   Works for index.html, legal.html, 404.html
+   Updated: December 2025
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Core Variables
+   -------------------------------------------------------------------------- */
+:root {
+  --c-primary: #EB1B21;
+  --c-primary-dark: #C3161C;
+
+  --c-white: #ffffff;
+  --c-gray-50: #fafafa;
+  --c-gray-100: #f5f5f5;
+  --c-gray-200: #e5e7eb;
+  --c-gray-300: #d1d5db;
+  --c-gray-600: #4b5563;
+  --c-gray-700: #374151;
+  --c-gray-800: #1f2937;
+  --c-gray-900: #111827;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.12);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Typography
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  background: var(--c-white);
+  color: var(--c-gray-800);
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Text Stroke
+   -------------------------------------------------------------------------- */
+.text-white-stroke {
+  color: white;
+  font-weight: 900;
+  -webkit-text-stroke: 3px var(--c-primary);
+  text-shadow:
+    3px 3px 0 var(--c-primary),
+    -3px -3px 0 var(--c-primary),
+    3px -3px 0 var(--c-primary),
+    -3px 3px 0 var(--c-primary),
+    0 3px 0 var(--c-primary),
+    3px 0 0 var(--c-primary),
+    -3px 0 0 var(--c-primary),
+    0 -3px 0 var(--c-primary);
+  paint-order: stroke fill;
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--c-gray-900);
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
+h2 { font-size: clamp(2.2rem, 6vw, 4rem); }
+h3 { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+.container {
+  width: min(100% - 2rem, 1280px);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Top Banner
+   -------------------------------------------------------------------------- */
+.top-banner {
+  background: var(--c-primary);
+  color: white;
+  text-align: center;
+  padding: 0.75rem 0;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+#current-flyer {
+  background: linear-gradient(to bottom, #f8f8f8, white);
+  text-align: center;
+}
+
+#current-flyer .hero-image-wrapper {
+  max-width: 1000px;
+  margin: 3rem auto;
+}
+
+#current-flyer .hero-image-wrapper img {
+  width: 100%;
+  border: 10px solid var(--c-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s ease;
+}
+
+#current-flyer .hero-image-wrapper img:hover {
+  transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+   Map & Store Locator
+   -------------------------------------------------------------------------- */
+#store-map {
+  height: 320px;
+  border-radius: var(--radius-xl);
+  border: 6px solid var(--c-primary);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+#map-loading {
+  background: rgba(255,255,255,0.97);
+  border-radius: var(--radius-xl);
+  transition: opacity 0.4s ease;
+}
+
+#store-info {
+  background: white;
+  border: 3px solid var(--c-primary);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin: 2rem auto 0;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+#store-info h3 {
+  color: var(--c-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Store Grid (Legacy Fallback)
+   -------------------------------------------------------------------------- */
+#store-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+#store-grid > div {
+  background: white;
+  padding: 1.75rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--c-gray-200);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  text-align: center;
+}
+
+#store-grid > div:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+#store-grid h3 {
+  color: var(--c-primary);
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: var(--c-primary);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background: var(--c-primary-dark);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+footer {
+  background: var(--c-gray-900);
+  color: white;
+  text-align: center;
+  padding: 3.5rem 1rem;
+  margin-top: auto;
+}
+
+footer a {
+  color: #fca5a5;
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   legal.html Styles
+   -------------------------------------------------------------------------- */
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.prose h2 {
+  font-size: 2.6rem;
+  color: var(--c-primary);
+  text-align: center;
+  margin: 3rem 0 2rem;
+}
+
+.prose h3 {
+  font-size: 1.9rem;
+  color: var(--c-gray-900);
+  border-bottom: 3px solid var(--c-primary);
+  margin: 3rem 0 1rem;
+  padding-bottom: 0.75rem;
+}
+
+.prose h4 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--c-gray-800);
+}
+
+.prose ul {
+  margin: 1.2rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: 0.75rem 0;
+}
+
+.prose a {
+  color: var(--c-primary);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.prose a:hover {
+  color: var(--c-primary-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  #store-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  html { font-size: 17px; }
+  section { padding: 6rem 0; }
+  #store-map { height: 460px; }
+  #current-flyer .hero-image-wrapper img { border-width: 12px; }
+}
+
+@media (min-width: 1024px) {
+  html { font-size: 18px; }
+  #store-grid { grid-template-columns: repeat(3, 1fr); }
+  #store-map { height: 520px; }
+}
+
+@media (min-width: 1280px) {
+  #store-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .top-banner { font-size: 0.8rem; padding: 0.6rem 0; }
+  #current-flyer .hero-image-wrapper img { border-width: 8px; }
+  .prose { padding: 1.5rem 1rem; font-size: 1.05rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+@media print {
+  .top-banner,
+  #store-map,
+  #map-loading,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+}

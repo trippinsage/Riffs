@@ -6,9 +6,9 @@ const urlsToCache = [
   '/assets/js/script.js',
   '/assets/img/riffs-cutout.webp',
   '/assets/img/heritage.webp',
-  '/assets/img/heritage.jpg',
   '/assets/img/background.webp',
   '/assets/img/challange.webp',
+  '/assets/img/xmas-banner.jpg',  
   '/404.html',
   '/legal.html',
   '/sitemap.xml'

@@ -1,56 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Primary SEO -->
   <title>Riff's Department Store Newfoundland & Labrador | Clothing, Footwear & Home Goods</title>
-  <meta name="description" content="Riff's – Newfoundland & Labrador's trusted department store since 1939. Shop affordable clothing, footwear, workwear, home essentials, and furniture at 20 convenient locations across the province." />
-  <meta name="keywords" content="Riff's, department store, Newfoundland, Labrador, clothing, footwear, workwear, home goods, furniture, NL stores" />
-  <meta name="author" content="Riff's Department Store">
+  <meta name="description" content="Riff’s – Newfoundland & Labrador's trusted family-owned department store since 1939. 20 locations province-wide." />
+  <meta name="keywords" content="Riff's, Riffs, department store, Newfoundland, Labrador, clothing, footwear, workwear, furniture, NL stores" />
+  <meta name="author" content="Riff's Department Store" />
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://www.riffs.ca" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Riff's Department Store – Serving NL Since 1939" />
-  <meta property="og:description" content="Shop affordable clothing, footwear, workwear, furniture, and more at 20 Riff’s locations across Newfoundland & Labrador." />
+  <meta property="og:description" content="20 family-owned stores across Newfoundland & Labrador." />
   <meta property="og:image" content="https://www.riffs.ca/assets/img/riffs-red.webp" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.riffs.ca" />
-  <meta property="og:site_name" content="Riff's Department Store" />
 
-  <!-- Twitter Card -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Riff's Department Store – Serving NL Since 1939" />
-  <meta name="twitter:description" content="Shop affordable clothing, footwear, workwear, furniture, and more at 20 Riff’s locations across Newfoundland & Labrador." />
+  <meta name="twitter:description" content="20 family-owned stores across Newfoundland & Labrador." />
   <meta name="twitter:image" content="https://www.riffs.ca/assets/img/riffs-red.webp" />
-  <meta name="twitter:site" content="@riffsdepartmentstore" />
 
-  <!-- Favicons -->
+  <!-- Icons -->
   <link rel="icon" href="/assets/img/favicon_io/favicon.ico" />
   <link rel="apple-touch-icon" href="/assets/img/favicon_io/apple-touch-icon.png" sizes="180x180" />
   <link rel="manifest" href="/assets/img/favicon_io/site.webmanifest" />
 
-  <!-- Stylesheets -->
+  <!-- Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/assets/css/styles.css" />
 
-  <!-- Structured Data for SEO -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": "Organization",
     "name": "Riff's Department Store",
     "url": "https://www.riffs.ca",
     "logo": "https://www.riffs.ca/assets/img/riffs-red.webp",
     "foundingDate": "1939",
     "address": {
       "@type": "PostalAddress",
-      "addressRegion": "NL",
-      "addressCountry": "Canada"
+      "addressRegion": "Newfoundland and Labrador",
+      "addressCountry": "CA"
     },
     "sameAs": [
       "https://www.facebook.com/riffsdepartmentstore",
@@ -67,153 +63,181 @@
     gtag('js', new Date());
     gtag('config', 'G-6D7LSS132Y');
   </script>
-
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
 </head>
 
-<body class="text-gray-800 font-sans">
+<body class="text-gray-800 font-sans antialiased min-h-screen flex flex-col">
 
-<!-- HERO | CHRISTMAS SALE -->
-<section id="current-flyer" class="pt-24 pb-20 md:pt-32 md:pb-32 bg-gradient-to-b from-gray-100 via-white to-gray-100">
-  <div class="container mx-auto px-4 sm:px-6 text-center">
-
-    <h1 class="text-6xl xs:text-7xl sm:text-8xl md:text-9xl lg:text-10xl font-black leading-tight">
-      <span class="text-red-600 drop-shadow-2xl">RIFFS</span>
-      <span class="text-red-600 drop-shadow-2xl">CHRISTMAS</span>
-      <span class="text-white-stroke">SALE</span>
-    </h1>
-
-    <p class="mt-8 md:mt-12 text-2xl xs:text-3xl md:text-5xl font-black text-red-600 uppercase tracking-widest animate-pulse">
-      Dec 8 – 14, 2025
-    </p>
-
-    <!-- Flyer Image -->
-    <div class="max-w-5xl mx-auto my-16 md:my-24">
-      <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-red-600">
-        <img 
-          src="/assets/img/xmas-banner.jpg" 
-          alt="Riff’s Christmas Sale 2025 promotional flyer banner"
-          loading="lazy">
-      </div>
+  <!-- TOP BANNER -->
+  <div class="top-banner">
+    <div class="container mx-auto px-4">
+      Riff’s Family-Owned in NL Since 1939 · 20 Stores Province-Wide
     </div>
-
-    <p class="text-gray-600 font-bold uppercase tracking-widest text-sm md:text-base pb-10">
-      Limited quantities • In-store only • Some exclusions apply
-    </p>
   </div>
-</section>
 
-<!-- Divider -->
-<div class="bg-red-600 h-1 sm:h-1.5 lg:h-2"></div>
+  <!-- HERO -->
+  <section id="current-flyer" class="pt-20 pb-16 md:pt-32 md:pb-32 bg-gradient-to-b from-gray-50 via-white to-gray-50 text-center">
+    <div class="container mx-auto px-4">
 
-<!-- STORE LOCATOR -->
-<section id="locations" class="py-16 bg-white fade-in">
-  <div class="container mx-auto px-4">
+      <h1 class="font-black leading-tight">
+        <span class="text-red-600 drop-shadow-2xl">RIFFS</span>
+        <span class="text-white-stroke">CHRISTMAS</span>
+        <span class="text-white-stroke">SALE 2025</span>
+      </h1>
 
-    <h2 class="text-3xl font-bold text-red-600 text-center mb-6">Visit Our 20 Locations</h2>
+      <p class="mt-6 md:mt-10 text-3xl md:text-6xl font-black text-red-600 uppercase tracking-widest animate-pulse">
+        Dec 8 – 14, 2025
+      </p>
 
-    <p class="text-lg text-center mb-8 max-w-2xl mx-auto">
-      Choose a store nearest to you or explore our interactive map of Newfoundland & Labrador.
-    </p>
-
-    <!-- Store Selector -->
-    <div class="flex justify-center mb-6">
-      <label for="store-select" class="sr-only">Select a Store</label>
-      <select id="store-select" class="w-full max-w-md p-3 rounded-md focus:ring-2 focus:ring-red-300">
-        <option value="">-- Select a Store --</option>
-      </select>
-    </div>
-
-    <!-- Map -->
-    <div class="flex justify-center">
-      <div class="w-full max-w-4xl relative">
-        <div id="store-map" class="w-full h-[400px] rounded-md" aria-label="Riff's store locations map"></div>
-
-        <!-- Loading Spinner -->
-        <div id="map-loading" class="absolute inset-0 bg-gray-200 bg-opacity-75 flex items-center justify-center z-10">
-          <div class="w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+      <div class="max-w-5xl mx-auto my-12 md:my-20">
+        <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-8 border-red-600">
+          <img src="/assets/img/xmas-banner.jpg" alt="Riff’s Christmas Sale 2025 – In-store only" class="w-full" loading="lazy">
         </div>
       </div>
+
+      <p class="text-gray-600 font-bold uppercase tracking-widest text-sm md:text-base">
+        Limited quantities • In-store only • Ends December 14th 2025
+      </p>
     </div>
+  </section>
 
-    <!-- Store Info Panel -->
-    <div class="flex justify-center mt-6">
-      <div id="store-info" class="w-full max-w-4xl p-6 bg-gray-100 rounded-md hidden"></div>
+  <div class="bg-red-600 h-1"></div>
+
+  <!-- MAP + LOCATOR -->
+  <section id="locations" class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 text-center">
+
+      <h2 class="font-black text-red-600 mb-6 text-4xl md:text-5xl">Find a Riff's Near You</h2>
+      <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+        Choose from 20 family-owned locations across Newfoundland & Labrador
+      </p>
+
+      <div class="flex justify-center mb-10">
+        <select id="store-select" class="w-full max-w-md p-4 rounded-xl border-2 border-gray-300 focus:border-red-600 focus:outline-none text-base shadow-sm">
+          <option value="">-- Select a Store --</option>
+        </select>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto mb-10">
+        <div id="store-map" class="h-80 md:h-96 lg:h-[500px] rounded-2xl shadow-2xl border-4 border-red-600 overflow-hidden"></div>
+
+        <div id="map-loading" class="absolute inset-0 bg-white bg-opacity-95 flex items-center justify-center rounded-2xl z-10">
+          <div class="w-12 h-12 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      </div>
+
+      <div id="store-info" class="max-w-4xl mx-auto p-8 bg-white rounded-2xl border-2 border-red-600 shadow-xl hidden"></div>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- RIFF’S CHALLENGE -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
 
-<!-- RIFF’S CHALLENGE -->
-<section id="stay-connected" class="py-16 bg-gray-50 fade-in">
-  <div class="container mx-auto px-4 text-center">
+      <h2 class="font-black text-red-600 mb-8 text-4xl md:text-5xl">The Riff’s Challenge</h2>
+      <p class="text-lg md:text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
+        One man. One summer. All 20 Riff’s stores. A true Newfoundland adventure.
+      </p>
 
-    <h2 class="text-3xl font-bold text-red-600 mb-6">Riff’s Challenge</h2>
+      <a href="https://www.cbc.ca/news/canada/newfoundland-labrador/lee-stewart-riffs-challenge-1.6982208"
+         target="_blank" rel="noopener noreferrer"
+         class="block max-w-2xl mx-auto bg-white rounded-2xl shadow-xl hover:shadow-2xl transition hover:-translate-y-2 overflow-hidden">
 
-    <p class="text-lg mb-6 max-w-2xl mx-auto">
-      Discover how one man turned a summer road trip into the <strong>Riff’s Challenge</strong> — visiting every Riff’s store across Newfoundland & Labrador.
-    </p>
+        <img src="/assets/img/challange.webp" alt="Lee Stewart completes the Riff’s Challenge" class="w-full h-72 object-cover" loading="lazy">
 
-    <a href="https://www.cbc.ca/news/canada/newfoundland-labrador/lee-stewart-riffs-challenge-1.6982208" 
-       target="_blank" 
-       rel="noopener noreferrer" 
-       class="block max-w-xl mx-auto bg-white shadow-md hover:shadow-lg rounded-lg overflow-hidden transition">
+        <div class="p-8">
+          <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-3">Exploring NL Through the Riff’s Challenge</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Lee Stewart visited every single Riff’s store in one epic road trip — and made memories that lasted a lifetime.
+          </p>
+        </div>
 
-      <img src="/assets/img/challange.webp" 
-           alt="Lee Stewart completing the Riff’s Challenge" 
-           class="w-full h-64 object-cover"
+      </a>
+    </div>
+  </section>
+
+  <!-- HERITAGE -->
+  <section class="py-24 bg-gray-50">
+    <div class="container mx-auto px-4 text-center max-w-6xl">
+
+      <h2 class="font-black text-red-600 mb-10 text-5xl md:text-6xl">Our Story Since 1939</h2>
+
+      <p class="text-xl md:text-2xl text-gray-700 leading-relaxed mb-16 max-w-4xl mx-auto">
+        For over <strong>85 years</strong>, Riff’s has been more than a store — we’ve been part of the fabric of Newfoundland & Labrador life.
+        Family-owned, community-first, and proudly NL.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-10 mb-16">
+        <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-red-600">
+          <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-4">1939 — The Beginning</h3>
+          <p class="text-gray-700 text-lg">A small general store opened in Windsor, Newfoundland — the start of a legacy built on trust and value.</p>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-red-600">
+          <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-4">1970s–1990s — Growth</h3>
+          <p class="text-gray-700 text-lg">As communities grew, so did Riff’s — opening new stores from coast to coast across the province.</p>
+        </div>
+
+        <div class="bg-white p-10 rounded-2xl shadow-xl border-t-8 border-red-600">
+          <h3 class="text-2xl md:text-3xl font-bold text-red-600 mb-4">Today — 20 Stores Strong</h3>
+          <p class="text-gray-700 text-lg">Still 100% family-owned. Still committed to quality, value, and the people of NL.</p>
+        </div>
+      </div>
+
+      <img src="/assets/img/heritage.webp"
+           alt="Historic Riff's storefront from the early years"
+           class="mx-auto w-full max-w-2xl rounded-2xl shadow-2xl object-cover"
            loading="lazy">
 
-      <div class="p-6">
-        <h3 class="text-xl font-semibold text-red-600 mb-2">Exploring Newfoundland Through the Riff’s Challenge</h3>
-        <p class="text-gray-700">
-          Lee Stewart’s journey across NL—visiting all 20 Riff’s stores—became a memorable and creative adventure.
-        </p>
+      <div class="mt-16">
+        <a href="mailto:info@riffs.ca" class="btn inline-block">Get in Touch</a>
       </div>
-    </a>
 
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- HERITAGE -->
-<section id="heritage" class="py-16 bg-gray-50 fade-in">
-  <div class="container mx-auto px-4 text-center">
+  <!-- 20 LOCATIONS ACCORDION -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
 
-    <h2 class="text-3xl font-bold text-red-600 mb-6">Our Heritage</h2>
+      <h2 class="font-black text-red-600 text-center mb-6 text-4xl md:text-5xl">All 20 Riff's Locations</h2>
+      <p class="text-center text-gray-600 text-lg md:text-xl mb-12 max-w-3xl mx-auto">
+        Proudly serving every corner of Newfoundland & Labrador since 1939
+      </p>
 
-    <p class="text-lg mb-6 max-w-2xl mx-auto">
-      Founded in 1939, Riff's has proudly served Newfoundland & Labrador for over eight decades. From our first store in Windsor to 20 locations today, our mission remains the same: value, quality, and community.
-    </p>
+      <div class="max-w-4xl mx-auto">
 
-    <img 
-      src="/assets/img/heritage.webp" 
-      alt="Historic Riff's storefront from the early years"
-      class="mx-auto max-w-xs md:max-w-sm rounded-md shadow-md mb-6"
-      loading="lazy">
+        <button id="locations-toggle" aria-expanded="false"
+          class="w-full bg-red-600 text-white font-bold py-5 px-8 rounded-2xl text-xl md:text-2xl hover:bg-red-700 transition flex items-center justify-between shadow-lg">
+          <span>View All 20 Locations</span>
+          <svg id="toggle-icon" class="w-8 h-8 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </button>
 
-    <p class="text-lg mb-6">Learn more about our history or reach out to our team anytime.</p>
+        <div id="locations-list"
+          class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 max-h-0 overflow-hidden transition-all duration-700 ease-in-out">
+        </div>
 
-    <a href="mailto:info@riffs.ca" class="button button-primary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white py-12 mt-auto">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-xl font-bold">© 2025 Riff's Department Store. Established 1939.</p>
+      <p class="mt-3 text-gray-400 text-lg">Proudly family-owned and serving Newfoundland & Labrador for over 85 years.</p>
+      <p class="mt-8">
+        <a href="/legal.html" class="text-red-400 hover:text-red-300 underline transition text-lg">Legal & Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
 
-<!-- FOOTER -->
-<footer class="bg-gray-800 text-white py-6">
-  <div class="container mx-auto px-4 text-center">
-    <p>© 2025 Riff's Department Store. Established 1939. Proudly serving Newfoundland & Labrador.</p>
-    <p class="mt-2">
-      <a href="/legal.html" class="text-red-300 hover:text-red-400 transition">Legal & Privacy</a>
-    </p>
-  </div>
-</footer>
-
-<!-- JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="/assets/js/script.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script type="module" src="/assets/js/riffs-map.js"></script>
 
 </body>
 </html>
