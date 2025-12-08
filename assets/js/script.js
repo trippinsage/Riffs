@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
      STORE DATA
   ----------------------------------------------------------------------- */
   const stores = [
-    { name: "Riff's Conception Bay South", lat: 47.5665, lng: -52.7853, address: "25 Conception Bay Hwy, Conception Bay South, NL", phone: "(709) 834-7600" },
     { name: "Riff's Bay Roberts", lat: 47.5628, lng: -53.2961, address: "29-31 Caldwell St, Bay Roberts, NL", phone: "(709) 786-5111" },
     { name: "Riff's Carbonear", lat: 47.2865, lng: -53.1740, address: "1-3 Merchant Dr, Carbonear, NL", phone: "(709) 596-5100" },
     { name: "Riff's Corner Brook", lat: 48.9500, lng: -57.9500, address: "44 Murphy Square, Corner Brook, NL", phone: "(709) 634-7100" },
