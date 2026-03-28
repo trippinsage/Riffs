@@ -1,17 +1,17 @@
-const CACHE_NAME = 'riffs-store-v1';
+const CACHE_NAME = 'riffs-store-v3';
 const urlsToCache = [
   '/',
   '/index.html',
   '/assets/css/styles.css',
   '/assets/js/script.js',
-  '/assets/img/riffs-cutout.webp',
+  '/assets/js/riffs-map.js',
+  '/assets/js/store-data.js',
+  '/assets/img/riffs-red.webp',
   '/assets/img/heritage.webp',
-  '/assets/img/background.webp',
   '/assets/img/challange.webp',
-  '/assets/img/xmas-banner.jpg',  
+  '/assets/img/easter-flyer-2026.jpg',
   '/404.html',
-  '/legal.html',
-  '/sitemap.xml'
+  '/legal.html'
 ];
 
 self.addEventListener('install', event => {
