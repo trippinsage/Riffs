@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.riffs.ca/sitemap.xml
+Sitemap: https://www.eastcoastpets.ca/sitemap.xml
+
+# Disallow private or irrelevant directories
+Disallow: /assets/tmp/
+Disallow: /assets/private/
+
+Host: www.eastcoastpets.ca
