@@ -1,0 +1,280 @@
+/* ==========================================================================
+   RIFF'S DEPARTMENT STORE — Custom Styles
+   Complements Tailwind CSS v3 · Mobile-first · Accessible
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Custom Properties
+   -------------------------------------------------------------------------- */
+:root {
+  --c-brand: #EB1B21;
+  --c-brand-dark: #C3161C;
+  --c-brand-light: #fff5f5;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --------------------------------------------------------------------------
+   Top Banner
+   -------------------------------------------------------------------------- */
+.top-banner {
+  background: var(--c-brand);
+  color: white;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .top-banner {
+    font-size: 0.875rem;
+    padding: 0.625rem 0;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+header.scrolled {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* --------------------------------------------------------------------------
+   Map & Store Locator
+   -------------------------------------------------------------------------- */
+#store-map {
+  transition: height 0.5s ease;
+}
+
+#map-loading {
+  transition: opacity 0.4s ease;
+}
+
+#map-touch-overlay {
+  transition: opacity 0.3s ease;
+}
+
+#store-info {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#store-info h3 {
+  color: var(--c-brand);
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: var(--c-brand);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  background: var(--c-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+@media (min-width: 640px) {
+  .btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Fade-in Animation (applied via JS IntersectionObserver)
+   -------------------------------------------------------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Custom Map Marker Pulse
+   -------------------------------------------------------------------------- */
+@keyframes pulse-marker {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+.custom-riff-marker.active svg {
+  animation: pulse-marker 0.8s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   Locations List Transition
+   -------------------------------------------------------------------------- */
+#locations-list {
+  transition: max-height 0.7s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   Legal Page (prose)
+   -------------------------------------------------------------------------- */
+.prose {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1.9;
+}
+
+.prose h2 {
+  font-size: 2.2rem;
+  color: var(--c-brand);
+  text-align: center;
+  margin: 3rem 0 1.5rem;
+}
+
+.prose h3 {
+  font-size: 1.6rem;
+  color: #111827;
+  border-bottom: 3px solid var(--c-brand);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.prose h4 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+  color: #1f2937;
+}
+
+.prose ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.prose li {
+  margin: 0.5rem 0;
+}
+
+.prose a {
+  color: var(--c-brand);
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.prose a:hover {
+  color: var(--c-brand-dark);
+}
+
+/* --------------------------------------------------------------------------
+   404 Page Buttons
+   -------------------------------------------------------------------------- */
+.button {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.button-primary {
+  background: var(--c-brand);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--c-brand-dark);
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  background: white;
+  color: var(--c-brand);
+  border: 2px solid var(--c-brand);
+}
+
+.button-secondary:hover {
+  background: var(--c-brand-light);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 3px solid #FFD700;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Print
+   -------------------------------------------------------------------------- */
+@media print {
+  .top-banner,
+  header,
+  #store-map,
+  #map-loading,
+  #map-touch-overlay,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mailchimp Popup Override (keep it out of the way since we have inline CTA)
+   -------------------------------------------------------------------------- */
+#PopupSignupForm_0,
+.mc-banner,
+.mc-modal {
+  z-index: 30 !important;
+}
