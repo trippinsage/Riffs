@@ -55,24 +55,33 @@ header.scrolled {
 /* --------------------------------------------------------------------------
    Map & Store Locator
    -------------------------------------------------------------------------- */
-#store-map {
-  transition: height 0.5s ease;
+/* Store dropdown enhanced focus/hover */
+#store-select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid #e5e7eb;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 
-#map-loading {
-  transition: opacity 0.4s ease;
+#store-select:focus, #store-select:hover {
+  border-color: var(--c-brand);
+  box-shadow: 0 0 0 3px var(--c-brand-light);
+  outline: none;
 }
 
-#map-touch-overlay {
-  transition: opacity 0.3s ease;
-}
-
-#store-info {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#store-info h3 {
-  color: var(--c-brand);
+/* Button accessibility improvements */
+.btn:focus-visible, .button:focus-visible {
+  outline: 3px solid #FFD700;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--c-brand-light);
 }
 
 /* --------------------------------------------------------------------------

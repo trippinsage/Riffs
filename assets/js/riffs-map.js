@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const redIcon = L.divIcon({
     className: "custom-riff-marker",
     html: `
-      <svg width="32" height="32" viewBox="0 0 24 24">
+      <svg width="32" height="32" viewBox="0 0 24 24" tabindex="0" aria-label="Store marker">
         <circle cx="12" cy="12" r="9" fill="#EB1B21" stroke="white" stroke-width="3"/>
         <circle cx="12" cy="12" r="4" fill="white"/>
       </svg>
@@ -110,6 +110,26 @@ document.addEventListener("DOMContentLoaded", () => {
     marker.on("click", () => {
       select.value = i;
       showStoreInfo(i);
+      // Animate marker
+      marker._icon.classList.add("active");
+      setTimeout(() => marker._icon.classList.remove("active"), 900);
+    });
+
+    // Keyboard accessibility for markers
+    marker.on("keypress", (e) => {
+      if (e.originalEvent.key === "Enter" || e.originalEvent.key === " ") {
+        select.value = i;
+        showStoreInfo(i);
+        marker._icon.classList.add("active");
+        setTimeout(() => marker._icon.classList.remove("active"), 900);
+      }
+    });
+
+    marker.on("mouseover", () => {
+      marker._icon.classList.add("active");
+    });
+    marker.on("mouseout", () => {
+      marker._icon.classList.remove("active");
     });
 
     markers.push(marker);
@@ -180,6 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
       activeMarker = null;
     } else {
       showStoreInfo(Number(val));
+      // Animate marker
+      if (markers[Number(val)] && markers[Number(val)]._icon) {
+        markers[Number(val)]._icon.classList.add("active");
+        setTimeout(() => markers[Number(val)]._icon.classList.remove("active"), 900);
+      }
     }
   });
 
